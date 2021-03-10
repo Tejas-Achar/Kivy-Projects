@@ -1,0 +1,49 @@
+<DataViz>:
+    orientation: "vertical"
+    spacing: 50
+    space_x: self.size[0]/1
+    canvas.before:
+        Color:
+            rgba: (0, 0, 0, 0)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    FloatLayout:
+        orientation:'vertical'
+        padding:100
+        spacing:30
+
+        Button:
+            size_hint:0.2, 0.06
+            pos_hint :{'center_x':0.15, 'center_y':0.65}
+            text:'Show Bar graph'
+            bold:True
+            background_color: (1, 1, 1, 1)
+            on_release: app.showBar()
+
+        Button:
+            size_hint:0.2, 0.06
+            pos_hint :{'center_x':0.15, 'center_y':0.55}
+            text:'Show Pie Graph'
+            bold:True
+            background_color: (1, 1, 1, 1)
+            on_release: app.showPie()
+
+        Button:
+            size_hint:0.2, 0.06
+            pos_hint :{'center_x':0.15, 'center_y':0.45}
+            text:'Show Line graph'
+            bold:True
+            background_color: (1, 1, 1, 1)
+            on_release: app.showLine()
+        Label:
+            size_hint:0.1, 0.06
+            pos_hint :{'center_x':0.60, 'center_y':0.5}
+            id: label1
+            text: app.Table
+        Label:
+            size_hint:0.1, 0.06
+            pos_hint :{'center_x':0.60, 'center_y':0.7}
+            id: label1
+            text: app.Title
